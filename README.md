@@ -14,8 +14,6 @@ $ kubectl create serviceaccount spark
 
 $ kubectl create clusterrolebinding spark-role --clusterrole=edit --serviceaccount=default:spark --namespace=default
 
-$ kubectl create serviceaccount spark
-
 
 ### Configuration and service definition
 $ kubectl create -f spark-configuration-configmap.yaml
