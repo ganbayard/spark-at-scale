@@ -10,11 +10,11 @@ Spark Kubernetes Containerization
 
 ### Namespace and role-rolebindings
 $ kubectl create -f namespace spark
+$ kubectl create serviceaccount spark
 
-$ kubectl create clusterrolebinding spark-role-binding-default --clusterrole=edit --serviceaccount=default:default
+$ kubectl create clusterrolebinding spark-role --clusterrole=edit --serviceaccount=default:spark --namespace=default
 
-$ kubectl create serviceaccount spark-service-account
-$ kubectl create clusterrolebinding spark-role-binding-spark --clusterrole=edit --serviceaccount=default:spark-service-account
+$ kubectl create serviceaccount spark
 
 
 ### Configuration and service definition
